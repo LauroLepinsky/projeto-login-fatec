@@ -13,5 +13,9 @@ form.addEventListener("submit", (e) => {
 		mensagem.textContent = "Login realizado com sucesso!";
 	} else {
 		mensagem.textContent = "Usuário ou senha incorretos.";
+		setTimeout(() => {
+			window.location.href =
+				"dashboard.html?usuario=" + encodeURIComponent(usuario.value);
+		}, 1000);
 	}
 });
